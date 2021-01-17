@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    $('.banner__item-button').click(function(){
-        $(this).next('.banner__item-list').fadeToggle();
+    $('.header__bot-item-button').click(function(){
+        $(this).next('.header__bot-item-list').fadeToggle();
     })
 
     $(document).click(function(e) {
-        if (!$(e.target).closest('.banner__item-button').length) {
-            $('.banner__item-list').fadeOut();
+        if (!$(e.target).closest('.header__bot-item-button').length) {
+            $('.header__bot-item-list').fadeOut();
         }
     });
 });
