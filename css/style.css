@@ -48,6 +48,7 @@ body {
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
     color: var(--white-color);
+    overflow-x: hidden;
 }
 
 .list-reset {
@@ -130,6 +131,7 @@ body {
 .header {
     position: relative;
     background:rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 .header::before {
@@ -203,7 +205,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    z-index: 1;
 }
 
 .header__bot-item {
@@ -284,7 +285,6 @@ body {
 
 .header__bot-form {
     margin-left: auto;
-    z-index: 1;
     cursor: pointer;
 }
 
@@ -356,18 +356,39 @@ body {
 }
 
 .simplebar-scrollbar::before {
+    left: 0;
+    right: 0;
     background-color: var(--light-violet-color);
     border-radius: 0;
 }
 
 .simplebar-track.simplebar-vertical {
-    width: 8px;
+    top: 40px;
+    height: 220px;
+    width: 2px;
+    margin-right: 19px;
+    background-color: var(--black-color);
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    top: 0;
+    bottom: 0;
 }
 
 .banner {
+    position: relative;
+}
+
+.banner-background {
     margin-top: -71px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 901px;
+    width: 100%;
     background: url('../img/birmingham-museums.jpg') no-repeat;
-    /* animation: 3s scale infinite; */
+    animation: 10s scale infinite;
+    z-index: -1;
 }
 
 .banner__text {
