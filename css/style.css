@@ -31,6 +31,7 @@
 }
 
 :root {
+    --grey-color: #ECECEC;
     --white-color: #FFF;
     --black-color: #000;
     --gray-color: #333;
@@ -48,6 +49,7 @@ body {
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
     color: var(--white-color);
+    overflow-x: hidden;
 }
 
 .list-reset {
@@ -420,8 +422,8 @@ body {
 
 .banner__button:focus {
     outline: none;
-    -webkit-box-shadow: 0 0 0 3px #7943A4;
-            box-shadow: 0 0 0 3px #7943A4;
+    -webkit-box-shadow: 0 0 0 3px var(--violet-color);
+            box-shadow: 0 0 0 3px var(--violet-color);
 }
 
 .banner__button:hover {
@@ -430,7 +432,7 @@ body {
 }
 
 .banner__button:active {
-    background-color: #7943A4;
+    background-color: var(--violet-color);
 }
 
 .about {
@@ -490,8 +492,38 @@ body {
 }
 
 .gallery__item {
+    position: relative;
     min-width: 350px;
     max-height: 350px;
+    cursor: pointer;
+}
+
+.gallery__item::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+}
+
+.gallery__item:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('../img/zoom.png');
+}
+
+.gallery__item:active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--hover-violet-color);
+    opacity: 0.4;
 }
 
 .gallery__item:nth-child(1),
@@ -576,8 +608,53 @@ body {
             align-items: center;
 }
 
-.arrow-prev {
+.gallery__arrow {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: var(--grey-color);
+    border-radius: 50%;
     margin-right: 18px;
+}
+
+.gallery__arrow:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--violet-color);
+}
+
+.gallery__arrow:hover {
+    background-color: var(--light-violet-color);
+}
+
+.gallery__arrow:hover::before,
+.gallery__arrow:hover::after {
+    background-color: var(--white-color);
+}
+
+.gallery__arrow:active,
+.gallery__arrow:active {
+    background-color: var(--violet-color);
+}
+
+.gallery__arrow::before, 
+.gallery__arrow::after {
+    content: '';
+    position: absolute;
+    height: 7px;
+    width: 1px;
+    background-color: var(--black-color);
+}
+
+.gallery__arrow::before {
+    top: 9px;
+    left: 14px;
+    transform: rotate(45deg);
+}
+
+.gallery__arrow::after {
+    top: 14px;
+    left: 14px;
+    transform: rotate(135deg);
 }
 
 .arrow-next {
