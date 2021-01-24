@@ -31,7 +31,7 @@
 }
 
 :root {
-    --grey-color: #ECECEC;
+    --grey-color: #666;
     --white-color: #FFF;
     --black-color: #000;
     --gray-color: #333;
@@ -357,7 +357,7 @@ body {
 }
 
 .simplebar-scrollbar {
-  background-color: var(--hover-violet-color);
+    background-color: var(--light-violet-color);
 }
 
 .simplebar-scrollbar::before {
@@ -375,6 +375,7 @@ body {
 }
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+    opacity: 0;
     top: 0;
     bottom: 0;
 }
