@@ -1081,6 +1081,11 @@ body {
     background-image: url('../img/event-picture-five.jpg');
 }
 
+.events__item:nth-child(4),
+.events__item:last-child {
+    display: none;
+}
+
 .events__smalltext {
     margin-bottom: 3px;
     font-weight: 600;

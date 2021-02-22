@@ -76,6 +76,11 @@ $(function() {
 		$(this).addClass('catalog__header-button-active');
 	});
 
+	$('.events__button').click(function(){
+		$('.events__item:nth-child(4)').fadeToggle('slow');
+		$('.events__item:last-child').fadeToggle('slow');
+	});
+
 	$('a.scroll-to').click(function(e) {
 		e.preventDefault();
 		const anchor = $(this).attr('href');
