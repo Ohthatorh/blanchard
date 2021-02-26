@@ -65,10 +65,10 @@ $(function() {
 
 	$('.catalog__header-button').click(function() {
 		const path = $(this).data().path;
-		$('.catalog__columns').each(function() {
-			$(this).removeClass('catalog__columns-active');
+		$('.catalog__accordion').each(function() {
+			$(this).removeClass('catalog__accordion-active');
 		});
-		$('[data-target="' + path + '"]').addClass('catalog__columns-active');
+		$('[data-target="' + path + '"]').addClass('catalog__accordion-active');
 	});
 	
 	$('.catalog__header-button').click(function() {
