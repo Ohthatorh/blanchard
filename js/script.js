@@ -69,16 +69,13 @@ $(function() {
 			$(this).removeClass('catalog__accordion-active');
 		});
 		$('[data-target="' + path + '"]').addClass('catalog__accordion-active');
-	});
-	
-	$('.catalog__header-button').click(function() {
 		$('.catalog__header-button').removeClass('catalog__header-button-active');
 		$(this).addClass('catalog__header-button-active');
 	});
 
 	$('.events__button').click(function(){
-		$('.events__item:nth-child(4)').fadeToggle('slow');
-		$('.events__item:last-child').fadeToggle('slow');
+		$('.events__item:nth-child(n+4)').fadeToggle('slow');
+		$(this).fadeOut();
 	});
 
 	$('a.scroll-to').click(function(e) {

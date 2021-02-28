@@ -1087,8 +1087,7 @@ body {
     background-image: url('../img/event-picture-five.jpg');
 }
 
-.events__item:nth-child(4),
-.events__item:last-child {
+.events__item:nth-child(n+4) {
     display: none;
 }
 
@@ -1181,8 +1180,8 @@ body {
     -webkit-box-orient: vertical; 
     -webkit-box-direction: normal; 
         -ms-flex-direction: column; 
-            flex-direction: column; 
-    min-width: 245px;
+            flex-direction: column;
+    align-items: end;
     margin-bottom: 41px;
 }
 
@@ -1218,7 +1217,7 @@ body {
 
 .checkbox-container__span {
     position: absolute;
-    top: 5px;
+    top: 4px;
     left: 0;
     width: 12px;
     height: 12px;
