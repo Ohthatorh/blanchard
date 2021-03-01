@@ -1200,7 +1200,6 @@ body {
     -webkit-transition: color .2s ease;
     -o-transition: color .2s ease;
     transition: color .2s ease;
-    outline: none;
 }
 
 .checkbox-container__label:focus {
