@@ -1182,53 +1182,61 @@ body {
         -ms-flex-direction: column; 
             flex-direction: column;
     align-items: end;
-    margin-bottom: 41px;
+    margin-bottom: 63px;
 }
 
 .checkbox-container__text {
-    margin-bottom: 14px;
+    margin-bottom: 8px;
     font-size: 16px;
     font-weight: 700;
 }
 
 .checkbox-container__label {
+    width: 250px;
+    display: inline-block;
     position: relative;
-    padding-left: 24px;
     cursor: pointer;
-    font-weight: 400;
-    font-size: 16px;
     -webkit-transition: color .2s ease;
     -o-transition: color .2s ease;
     transition: color .2s ease;
 }
 
-.checkbox-container__label:focus {
-    outline: 2px solid var(--violet-color);
-}
-
 .checkbox-container__label:not(:last-child) {
-    margin-bottom: 14px;
-}
-
-.checkbox {
-    cursor: pointer;
+    margin-bottom: 32px;
 }
 
 .checkbox-container__span {
+    padding-left: 24px;
     position: absolute;
     top: 4px;
     left: 0;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+
+.checkbox:focus + .checkbox-container__span {
+    outline: 2px solid var(--violet-color);
+}
+
+.checkbox-container__span::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
     width: 12px;
     height: 12px;
-    text-align: center;
     border: 1px solid var(--white-color);
+    -webkit-transition: border .2s ease;
+    -o-transition: border .2s ease;
+    transition: border .2s ease;
 }
 
 .checkbox-container__span::after {
     content: '';
     position: absolute;
-    left: 3px;
-    top: 3px;
+    left: 5px;
+    top: 8px;
     border: 1px solid var(--hover-violet-color);
     border-width: 0 4px 4px 0;
     border-radius: 50%;
@@ -1238,40 +1246,27 @@ body {
     opacity: 0;
 }
 
-.checkbox-container__label:hover {
+.checkbox-container__label:hover,
+.checkbox:checked + .checkbox-container__span {
     color: var(--hover-violet-color);
 }
 
-.checkbox-container__label:active {
-    color: var(--violet-color);
-    outline: none;
-}
-
-.checkbox-container__label:hover > .checkbox-container__span {
+.checkbox-container__label:hover > .checkbox-container__span::before,
+.checkbox:checked + .checkbox-container__span::before {
     border-color: var(--hover-violet-color);
 }
 
-.checkbox-container__label:active > .checkbox-container__span {
+.checkbox-container__label:active > .checkbox-container__span::before {
     border: 1px solid var(--violet-color) !important; 
 }
 
-.checkbox-container__label:active > .checkbox-container__span::after {
+.checkbox-container__label:active > .checkbox-container__span::after,
+.checkbox-container__label:active {
     border-color: var(--violet-color);
 }
 
+.checkbox:checked + .checkbox-container__span::after,
 .checkbox-container__label:hover > .checkbox-container__span::after {
-    opacity: 1;
-}
-
-.checkbox:checked + .checkbox-container__span {
-    border-color: var(--hover-violet-color);
-}
-
-.checkbox:checked + .checkbox-container__label {
-    color: var(--hover-violet-color); /* почему не работает? */
-}
-
-.checkbox:checked + .checkbox-container__span::after {
     opacity: 1;
 }
 
