@@ -1425,87 +1425,33 @@ body {
 }
 
 .projects__link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 450px;
     height: 150px;
-    background-position: center;
-    background-repeat: no-repeat;
+}
+
+.projects__link:hover > .projects__img {
+    opacity: 0;
+}
+
+.projects__link:hover > .projects__img-color {
+    opacity: 1;
 }
 
 .projects__item:not(:last-child) {
     margin-right: 50px;
 }
 
-.freelands-foundation {
-    background-image: url('../img/freelands-foundation.jpg');
+.projects__img {
+    position: relative;
+    transition: opacity .2s ease;
 }
 
-.freelands-foundation:hover {
-    background-image: url('../img/freelands-foundation-color.jpg');
-}
-
-.institute {
-    background-image: url('../img/institute.jpg');
-}
-
-.institute:hover {
-    background-image: url('../img/institute-color.jpg');
-}
-
-.workhouse {
-    background-image: url('../img/workhouse.jpg');
-}
-
-.workhouse:hover {
-    background-image: url('../img/workhouse-color.jpg');
-}
-
-.wine {
-    background-image: url('../img/wine.jpg');
-}
-
-.wine:hover {
-    background-image: url('../img/wine-color.jpg');
-}
-
-.hiscox {
-    background-image: url('../img/hiscox.jpg');
-}
-
-.hiscox:hover {
-    background-image: url('../img/hiscox-color.jpg');
-}
-
-.camden {
-    background-image: url('../img/camden.jpg');
-}
-
-.camden:hover {
-    background-image: url('../img/camden-color.jpg');
-}
-
-.stassen {
-    background-image: url('../img/stassen.jpg');
-}
-
-.stassen:hover {
-    background-image: url('../img/stassen-color.jpg');
-}
-
-.watts {
-    background-image: url('../img/watts.jpg');
-}
-
-.watts:hover {
-    background-image: url('../img/watts-color.jpg');
-}
-
-.art-design {
-    background-image: url('../img/art-design.jpg');
-}
-
-.art-design:hover {
-    background-image: url('../img/art-design-color.jpg');
+.projects__img-color {
+    position: absolute;
+    opacity: 0;
 }
 
 .projects__arrow {
@@ -1554,7 +1500,7 @@ body {
     color: var(--gray-color);
 }
 
-.contacts__room {
+.contacts__shouroom {
     margin-bottom: 12px;
     font-weight: 600;
     font-size: 24px;
