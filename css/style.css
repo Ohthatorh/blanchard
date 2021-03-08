@@ -1475,6 +1475,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding-left: calc(7% + 26px);
 }
 
 .contacts__left-column {
