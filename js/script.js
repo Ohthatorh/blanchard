@@ -4,6 +4,16 @@ $(function() {
 		itemSelectText: '',
 	});
 
+	$(window).resize(function() {
+		if(document.documentElement.clientWidth > 1024) {
+			$('.hamburger--spring').removeClass('is-active');
+		}
+	});
+
+	$('.hamburger--spring').click(function() {
+		$(this).toggleClass('is-active');
+	});
+
 	$('.choices__list').click(function() {
 		$('.choices__item').each(function() {
 			if ($(this).hasClass('is-selected')) {
@@ -12,21 +22,62 @@ $(function() {
 		});
 	});
 
-	const swiperSettings = {
-		direction: 'horizontal',
+	const gallerySwiper = new Swiper($('.swiper-container')[0], {
+		slidesPerView: 3,
+		slidesPerColumn: 2,
+		slidesPerGroup: 3,
+		
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// },
+
+		navigation: {
+			nextEl: '.arrow-next',
+			prevEl: '.arrow-prev',
+		},
+
 		pagination: {
 			el: '.swiper-pagination',
+			clickable: true,
 			type: 'fraction',
 		},
+	});
+	
+	const publicationsSwiper = new Swiper($('.swiper-container')[1], {
+		slidesPerView: 3,
+		slidesPerGroup: 3,
+
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// },
+
+		navigation: {
+			nextEl: '.arrow-next',
+			prevEl: '.arrow-prev',
+		},
+
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			type: 'fraction',
+		},
+	});
+	const projectsSwiper = new Swiper($('.swiper-container')[2], {
+		slidesPerView: 3,
+		slidesPerGroup: 3,
+
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// },
+
 		navigation: {
 			nextEl: '.arrow-next',
 			prevEl: '.arrow-prev',
 		}
-	};
-
-	const gallerySwiper = new Swiper($('.swiper-container')[0], swiperSettings);
-	const publicationsSwiper = new Swiper($('.swiper-container')[1], swiperSettings);
-	const projectsSwiper = new Swiper($('.swiper-container')[2], swiperSettings);
+	});
 
 	$('.header__bot-item-button').click(function() {
 		$(this).next('.header__bot-item-list').fadeToggle();

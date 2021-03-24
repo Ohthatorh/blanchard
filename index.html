@@ -17,6 +17,11 @@
    <body>
       <header class="header">
          <div class="header__top container">
+            <button class="hamburger hamburger--spring" type="button">
+               <span class="hamburger-box">
+                   <span class="hamburger-inner"></span>
+               </span>
+           </button>
             <img class="logo" src="img/logo.svg" alt="Логотип Blanchard - художественная галерея">
             <ul class="header__top-list list-reset">
                <li class="header__top-item">
@@ -44,6 +49,10 @@
             <button class="header__top-button btn" aria-label="Войти в личный кабинет">
             Войти
             </button>
+            <form class="header__top-form">
+               <button class="header__top-search btn"></button>
+               <input class="header__top-input input" type="text" placeholder="Поиск по сайту">
+            </form>
          </div>
          <div class="header__bot container">
             <ul class="header__bot-list list-reset">
@@ -133,10 +142,6 @@
                   </ul>
                </li>
             </ul>
-            <form class="header__bot-form">
-               <button class="header__bot-search btn"></button>
-               <input class="header__bot-input input" type="text" placeholder="Поиск по сайту">
-            </form>
          </div>
       </header>
       <main class="main">
@@ -187,68 +192,62 @@
                      <div class="swiper-pagination"></div>
                      <button class="swiper-arrow arrow-next btn" aria-label="Стрелка вперед"></button>
                   </div>
-                  <div class="swiper-wrapper">
-                     <ul class="gallery__list list-reset swiper-slide">
-                        <li class="gallery__item">
-                           <img src="img/first.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/second.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/third.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/fourth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/fifth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/sixth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                     </ul>
-                     <ul class="gallery__list list-reset swiper-slide">
-                        <li class="gallery__item">
-                           <img src="img/seventh.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/eighth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/nineth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/tenth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/eleventh.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/twelfth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                     </ul>
-                     <ul class="gallery__list list-reset swiper-slide">
-                        <li class="gallery__item">
-                           <img src="img/thirteenth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/fourteenth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/fifteenth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/sixteenth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/seventeenth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                        <li class="gallery__item">
-                           <img src="img/eighteenth.jpg" alt="Картинка из галереи" class="gallery__img">
-                        </li>
-                     </ul>
-                  </div>
+                  <ul class="gallery__list list-reset swiper-wrapper">
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/first.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/second.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/third.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/fourth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/fifth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/sixth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/seventh.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/eighth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/nineth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/tenth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/eleventh.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/twelfth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/thirteenth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/fourteenth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/fifteenth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/sixteenth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/seventeenth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                     <li class="gallery__item swiper-slide">
+                        <img src="img/eighteenth.jpg" alt="Картинка из галереи" class="gallery__img">
+                     </li>
+                  </ul>
                </div>
             </div>
          </section>
@@ -2414,8 +2413,8 @@
                      </div>
                   </li>
                   <li class="events__item">
+                     <img class="events__img" src="img/event-picture-five.jpg" alt="Картинка в событиях">
                      <div class="events__description">
-                        <img class="events__img" src="img/event-picture-five.jpg" alt="Картинка в событиях">
                         <p class="events__smalltext text-reset">
                            ММАМ<br>с 8 апреля по 20 мая
                         </p>
@@ -2510,9 +2509,8 @@
                      <div class="swiper-pagination"></div>
                      <button class="swiper-arrow arrow-next btn" aria-label="Стрелка вперед"></button>
                   </div>
-                  <div class="swiper-wrapper">
-                     <ul class="publications__list list-reset swiper-slide">
-                        <li class="publications__item">
+                     <ul class="publications__list list-reset swiper-wrapper">
+                        <li class="publications__item swiper-slide">
                            <img src="img/publications-picture.jpg" alt="Картинка из издания" class="publications__img">
                            <div class="publications__caption">
                               <p class="publications__item-text text-reset">
@@ -2529,7 +2527,7 @@
                            Заказать
                            </button>
                         </li>
-                        <li class="publications__item">
+                        <li class="publications__item swiper-slide">
                            <img src="img/publications-picture-second.jpg" alt="Картинка из издания" class="publications__img">
                            <div class="publications__caption">
                               <p class="publications__item-text text-reset">
@@ -2546,7 +2544,7 @@
                            Заказать
                            </button>
                         </li>
-                        <li class="publications__item">
+                        <li class="publications__item swiper-slide">
                            <img src="img/publications-picture-third.jpg" alt="Картинка из издания" class="publications__img">
                            <div class="publications__caption">
                               <p class="publications__item-text text-reset">
@@ -2563,9 +2561,7 @@
                            Заказать
                            </button>
                         </li>
-                     </ul>
-                     <ul class="publications__list list-reset swiper-slide">
-                        <li class="publications__item">
+                        <li class="publications__item swiper-slide">
                            <img src="img/publications-picture-fourth.jpg" alt="Картинка из издания" class="publications__img">
                            <div class="publications__caption">
                               <p class="publications__item-text text-reset">
@@ -2582,7 +2578,7 @@
                            Заказать
                            </button>
                         </li>
-                        <li class="publications__item">
+                        <li class="publications__item swiper-slide">
                            <img src="img/publications-picture-fifth.jpg" alt="Картинка из издания" class="publications__img">
                            <div class="publications__caption">
                               <p class="publications__item-text text-reset">
@@ -2599,7 +2595,7 @@
                            Заказать
                            </button>
                         </li>
-                        <li class="publications__item">
+                        <li class="publications__item swiper-slide">
                            <img src="img/publications-picture-sixth.jpg" alt="Картинка из издания" class="publications__img">
                            <div class="publications__caption">
                               <p class="publications__item-text text-reset">
@@ -2616,9 +2612,7 @@
                            Заказать
                            </button>
                         </li>
-                     </ul>
-                     <ul class="publications__list list-reset swiper-slide">
-                        <li class="publications__item">
+                        <li class="publications__item swiper-slide">
                            <img src="img/publications-picture-seventh.jpg" alt="Картинка из издания" class="publications__img">
                            <div class="publications__caption">
                               <p class="publications__item-text text-reset">
@@ -2635,8 +2629,9 @@
                            Заказать
                            </button>
                         </li>
+                        <li class="publications__item swiper-slide"></li>
+                        <li class="publications__item swiper-slide"></li>
                      </ul>
-                  </div>
                </div>
             </div>
          </section>
@@ -2675,59 +2670,54 @@
                   </p>
                   <button class="projects__arrow swiper-arrow arrow-next btn" aria-label="Стрелка вперед"></button>
                   <button class="projects__arrow swiper-arrow arrow-prev btn" aria-label="Стрелка назад"></button>
-                  <div class="swiper-wrapper">
-                     <ul class="projects__list swiper-slide list-reset">
-                        <li class="projects__item list-reset">
+                     <ul class="projects__list swiper-wrapper list-reset">
+                        <li class="projects__item swiper-slide list-reset">
                            <a href="#" class="projects__link link freelands-foundation">
                               <img class="projects__img" src="img/freelands-foundation.jpg" alt="Freelands Foundation">
                            </a>
                         </li>
-                        <li class="projects__item list-reset">
+                        <li class="projects__item swiper-slide list-reset">
                            <a href="#" class="projects__link link institute">
                               <img class="projects__img" src="img/institute.jpg" alt="Institute">
                            </a>
                         </li>
-                        <li class="projects__item list-reset">
+                        <li class="projects__item swiper-slide list-reset">
                            <a href="#" class="projects__link link workhouse">
                               <img class="projects__img" src="img/workhouse.jpg" alt="Workhouse">
                            </a>
                         </li>
-                     </ul>
-                     <ul class="projects__list swiper-slide list-reset">
-                        <li class="projects__item list-reset">
+                        <li class="projects__item swiper-slide list-reset">
                            <a href="#" class="projects__link link wine">
                               <img class="projects__img" src="img/wine.jpg" alt="Wine">
                            </a>
                         </li>
-                        <li class="projects__item list-reset">
+                        <li class="projects__item swiper-slide list-reset">
                            <a href="#" class="projects__link link hiscox">
                               <img class="projects__img" src="img/hiscox.jpg" alt="Hiscox">
                            </a>
                         </li>
-                        <li class="projects__item list-reset">
+                        <li class="projects__item swiper-slide list-reset">
                            <a href="#" class="projects__link link camden">
                               <img class="projects__img" src="img/camden.jpg" alt="Camden">
                            </a>
                         </li>
-                     </ul>
-                     <ul class="projects__list swiper-slide list-reset">
-                        <li class="projects__item list-reset">
+                        <li class="projects__item swiper-slide list-reset">
                            <a href="#" class="projects__link link stassen">
                               <img class="projects__img" src="img/stassen.jpg" alt="Stassen">
                            </a>
                         </li>
-                        <li class="projects__item list-reset">
+                        <li class="projects__item swiper-slide list-reset">
                            <a href="#" class="projects__link link watts">
                               <img class="projects__img" src="img/watts.jpg" alt="Watts">
                            </a>
                         </li>
-                        <li class="projects__item list-reset">
+                        <li class="projects__item swiper-slide list-reset">
                            <a href="#" class="projects__link link art-design">
                               <img class="projects__img" src="img/art-design.jpg" alt="Art-design">
                            </a>
                         </li>
                      </ul>
-                  </div>
+
                </div>
             </div>
          </section>
