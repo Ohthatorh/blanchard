@@ -31,5 +31,23 @@ new JustValidate('.js-form', {
             required: 'Поле "Телефон" обязательно для заполнения',
             function: 'Заполните поле "Телефон" до конца'
         }
+    },
+    submitHandler: function(form) {
+        let formData = new FormData(form);
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    const textSuccess = document.querySelector('.contacts__left-column-text');
+                    const form = document.querySelector('.contacts__form');
+                    textSuccess.textContent = 'Отправлено!';
+                    textSuccess.classList.add('success');
+                    form.remove();
+                }
+            }
+        }
+        xhr.open('POST', 'mail.php', true);
+        xhr.send(formData);
+        form.reset();
     }
 })

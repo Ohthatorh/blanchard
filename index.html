@@ -23,7 +23,8 @@
                </span>
            </button>
             <img class="logo" src="img/logo.svg" alt="Логотип Blanchard - художественная галерея">
-            <ul class="header__top-list list-reset">
+            <div class="header__menu">
+               <ul class="header__top-list list-reset">
                <li class="header__top-item">
                   <a href="#about" class="header__top-link link scroll-to">О нас</a>
                </li>
@@ -45,10 +46,11 @@
                <li class="header__top-item">
                   <a href="#contacts" class="header__top-link link scroll-to">Контакты</a>
                </li>
-            </ul>
-            <button class="header__top-button btn" aria-label="Войти в личный кабинет">
-            Войти
-            </button>
+               </ul>
+               <button class="header__top-button btn" aria-label="Войти в личный кабинет">
+                  Войти
+               </button>
+            </div>
             <form class="header__top-form">
                <button class="header__top-search btn"></button>
                <input class="header__top-input input" type="text" placeholder="Поиск по сайту">
@@ -156,7 +158,13 @@
                </p>
                <a href="#contacts" class="banner__link link scroll-to">Подписаться на рассылку</a>
             </div>
-            <div class="banner__background"></div>
+            <div class="banner__background swiper-container">
+               <ul class="banner__background-list list-reset swiper-wrapper">
+                  <li class="banner__background-item swiper-slide"></li>
+                  <li class="banner__background-item swiper-slide"></li>
+                  <li class="banner__background-item swiper-slide"></li>
+               </ul>
+            </div>
          </section>
          <section id="about" class="about">
             <div class="about__text container">
@@ -187,10 +195,10 @@
                   </p>
                </div>
                <div class="gallery__right-column swiper-container">
-                  <div class="swiper-panel">
-                     <button class="swiper-arrow arrow-prev btn" aria-label="Стрелка назад"></button>
+                  <div class="gallery__swiper-panel swiper-panel">
+                     <button class="gallery__arrow-prev swiper-arrow arrow-prev btn" aria-label="Стрелка назад"></button>
                      <div class="swiper-pagination"></div>
-                     <button class="swiper-arrow arrow-next btn" aria-label="Стрелка вперед"></button>
+                     <button class="gallery__arrow-next swiper-arrow arrow-next btn" aria-label="Стрелка вперед"></button>
                   </div>
                   <ul class="gallery__list list-reset swiper-wrapper">
                      <li class="gallery__item swiper-slide">
@@ -2341,10 +2349,10 @@
             </div>
          </section>
          <section id="events" class="events">
-            <div class="events__content container">
+            <div class="events__content container events-swiper swiper-container">
                <h2 class="events__title title text-reset">События</h2>
-               <ul class="events__list list-reset">
-                  <li class="events__item">
+               <ul class="events__list list-reset swiper-wrapper">
+                  <li class="events__item swiper-slide">
                      <img class="events__img" src="img/event-picture.jpg" alt="Картинка в событиях">
                      <div class="events__description">
                         <p class="events__smalltext text-reset">
@@ -2361,7 +2369,7 @@
                         </p>
                      </div>
                   </li>
-                  <li class="events__item">
+                  <li class="events__item swiper-slide">
                      <img class="events__img" src="img/event-picture-two.jpg" alt="Картинка в событиях">
                      <div class="events__description">
                         <p class="events__smalltext text-reset">
@@ -2378,7 +2386,7 @@
                         </p>
                      </div>
                   </li>
-                  <li class="events__item">
+                  <li class="events__item swiper-slide">
                      <img class="events__img" src="img/event-picture-three.jpg" alt="Картинка в событиях">
                      <div class="events__description">
                         <p class="events__smalltext text-reset">
@@ -2395,7 +2403,7 @@
                         </p>
                      </div>
                   </li>
-                  <li class="events__item">
+                  <li class="events__item swiper-slide">
                      <img class="events__img" src="img/event-picture-four.jpg" alt="Картинка в событиях">
                      <div class="events__description">
                         <p class="events__smalltext text-reset">
@@ -2412,7 +2420,7 @@
                         </p>
                      </div>
                   </li>
-                  <li class="events__item">
+                  <li class="events__item swiper-slide">
                      <img class="events__img" src="img/event-picture-five.jpg" alt="Картинка в событиях">
                      <div class="events__description">
                         <p class="events__smalltext text-reset">
@@ -2430,6 +2438,9 @@
                      </div>
                   </li>
                </ul>
+               <div class="events__swiper-panel swiper-panel">
+                  <div class="events__pagination swiper-pagination"></div>
+               </div>
                <button class="events__button btn">
                Все события
                </button>
@@ -2441,55 +2452,55 @@
                   <h2 class="publications__title title text-reset">
                      Издания
                   </h2>
+                  <p class="publications__left-column-text text-reset">Категории</p>
                   <div class="publications__checkbox-container">
-                     <p class="checkbox-container__text text-reset">Категории</p>
                      <label class="checkbox-container__label">
-                     <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                     <span class="checkbox-container__span">Бестселлеры</span>
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox-container__span">Бестселлеры</span>
                      </label>
                      <label class="checkbox-container__label">
-                     <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                     <span class="checkbox-container__span">Искусство</span>
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox-container__span">Искусство</span>
                      </label>
                      <label class="checkbox-container__label">
-                     <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                     <span class="checkbox-container__span">Архитектура</span>
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox-container__span">Архитектура</span>
                      </label>
                      <label class="checkbox-container__label">
-                     <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                     <span class="checkbox-container__span">Дизайн</span>
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox-container__span">Дизайн</span>
                      </label>
                      <label class="checkbox-container__label">
-                     <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                     <span class="checkbox-container__span">Мода</span>
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox-container__span">Мода</span>
                      </label>
                      <label class="checkbox-container__label">
-                     <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                     <span class="checkbox-container__span">Детям</span>
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox-container__span">Детям</span>
                      </label>
                      <label class="checkbox-container__label">
-                     <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                     <span class="checkbox-container__span">Художественная литература</span>
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox-container__span">Художественная литература</span>
                      </label>
                      <label class="checkbox-container__label">
-                     <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                     <span class="checkbox-container__span">Публицистика</span>
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox-container__span">Публицистика</span>
                      </label>
                      <label class="checkbox-container__label">
-                     <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                     <span class="checkbox-container__span">Путеводители</span>
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox-container__span">Путеводители</span>
                      </label>
                      <label class="checkbox-container__label">
-                     <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                     <span class="checkbox-container__span">Философия</span>
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox-container__span">Философия</span>
                      </label>
                      <label class="checkbox-container__label">
-                     <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                     <span class="checkbox-container__span">Учебная литература</span>
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox-container__span">Учебная литература</span>
                      </label>
                      <label class="checkbox-container__label">
-                     <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
-                     <span class="checkbox-container__span">Журналы и газеты</span>
+                        <input type="checkbox" name="checkbox" class="checkbox visually-hidden">
+                        <span class="checkbox-container__span">Журналы и газеты</span>
                      </label>
                   </div>
                   <p class="publications__price-text text-reset">
@@ -2500,138 +2511,138 @@
                      <input name="from" id="from" min="50" max="25000" class="publications__form-input input" type="number" placeholder="50">
                      <label class="publications__form-text-mid" for="to">до</label>
                      <input name="to" min="51" id="to" max="25000" class="publications__form-input input" type="number" placeholder="25000">
-                     <label class="publications__form-text">рублей</label>
+                     <label class="publications__form-text">руб.</label>
                   </form>
                </div>
                <div class="publications__right-column swiper-container">
-                  <div class="swiper-panel">
-                     <button class="swiper-arrow arrow-prev btn" aria-label="Стрелка назад"></button>
+                  <div class="publications__swiper-panel swiper-panel">
+                     <button class="publications__arrow-prev swiper-arrow arrow-prev btn" aria-label="Стрелка назад"></button>
                      <div class="swiper-pagination"></div>
-                     <button class="swiper-arrow arrow-next btn" aria-label="Стрелка вперед"></button>
+                     <button class="publications__arrow-next swiper-arrow arrow-next btn" aria-label="Стрелка вперед"></button>
                   </div>
-                     <ul class="publications__list list-reset swiper-wrapper">
-                        <li class="publications__item swiper-slide">
-                           <img src="img/publications-picture.jpg" alt="Картинка из издания" class="publications__img">
-                           <div class="publications__caption">
-                              <p class="publications__item-text text-reset">
-                                 Искусство цвета
-                              </p>
-                              <p class="publication__item-price text-reset">
-                                 620 руб
-                              </p>
-                           </div>
-                           <p class="publication__item-description text-reset">
-                              Иттен, Йоханнес
+                  <ul class="publications__list list-reset swiper-wrapper">
+                     <li class="publications__item swiper-slide">
+                        <img src="img/publications-picture.jpg" alt="Картинка из издания" class="publications__img">
+                        <div class="publications__caption">
+                           <p class="publications__item-text text-reset">
+                              Искусство цвета
                            </p>
-                           <button class="publications__button btn">
-                           Заказать
-                           </button>
-                        </li>
-                        <li class="publications__item swiper-slide">
-                           <img src="img/publications-picture-second.jpg" alt="Картинка из издания" class="publications__img">
-                           <div class="publications__caption">
-                              <p class="publications__item-text text-reset">
-                                 Типографика
-                              </p>
-                              <p class="publication__item-price text-reset">
-                                 2 450 руб
-                              </p>
-                           </div>
-                           <p class="publication__item-description text-reset">
-                              Рудер, Эмиль
+                           <p class="publication__item-price text-reset">
+                              620 руб
                            </p>
-                           <button class="publications__button btn">
-                           Заказать
-                           </button>
-                        </li>
-                        <li class="publications__item swiper-slide">
-                           <img src="img/publications-picture-third.jpg" alt="Картинка из издания" class="publications__img">
-                           <div class="publications__caption">
-                              <p class="publications__item-text text-reset">
-                                 Книга про буквы
-                              </p>
-                              <p class="publication__item-price text-reset">
-                                 2 200 руб
-                              </p>
-                           </div>
-                           <p class="publication__item-description text-reset">
-                              Гордон, Юрий
+                        </div>
+                        <p class="publication__item-description text-reset">
+                           Иттен, Йоханнес
+                        </p>
+                        <button class="publications__button btn">
+                        Заказать
+                        </button>
+                     </li>
+                     <li class="publications__item swiper-slide">
+                        <img src="img/publications-picture-second.jpg" alt="Картинка из издания" class="publications__img">
+                        <div class="publications__caption">
+                           <p class="publications__item-text text-reset">
+                              Типографика
                            </p>
-                           <button class="publications__button btn">
-                           Заказать
-                           </button>
-                        </li>
-                        <li class="publications__item swiper-slide">
-                           <img src="img/publications-picture-fourth.jpg" alt="Картинка из издания" class="publications__img">
-                           <div class="publications__caption">
-                              <p class="publications__item-text text-reset">
-                                 Николай Ильин
-                              </p>
-                              <p class="publication__item-price text-reset">
-                                 1 1000 руб
-                              </p>
-                           </div>
-                           <p class="publication__item-description text-reset">
-                              Крический, Владимир
+                           <p class="publication__item-price text-reset">
+                              2 450 руб
                            </p>
-                           <button class="publications__button btn">
-                           Заказать
-                           </button>
-                        </li>
-                        <li class="publications__item swiper-slide">
-                           <img src="img/publications-picture-fifth.jpg" alt="Картинка из издания" class="publications__img">
-                           <div class="publications__caption">
-                              <p class="publications__item-text text-reset">
-                                 Модульные сетки в граф...
-                              </p>
-                              <p class="publication__item-price text-reset">
-                                 1 450 руб
-                              </p>
-                           </div>
-                           <p class="publication__item-description text-reset">
-                              Мюллер-Брокманн, Йозеф
+                        </div>
+                        <p class="publication__item-description text-reset">
+                           Рудер, Эмиль
+                        </p>
+                        <button class="publications__button btn">
+                        Заказать
+                        </button>
+                     </li>
+                     <li class="publications__item swiper-slide">
+                        <img src="img/publications-picture-third.jpg" alt="Картинка из издания" class="publications__img">
+                        <div class="publications__caption">
+                           <p class="publications__item-text text-reset">
+                              Книга про буквы
                            </p>
-                           <button class="publications__button btn">
-                           Заказать
-                           </button>
-                        </li>
-                        <li class="publications__item swiper-slide">
-                           <img src="img/publications-picture-sixth.jpg" alt="Картинка из издания" class="publications__img">
-                           <div class="publications__caption">
-                              <p class="publications__item-text text-reset">
-                                 Эволюция графических стилей
-                              </p>
-                              <p class="publication__item-price text-reset">
-                                 3 200 руб
-                              </p>
-                           </div>
-                           <p class="publication__item-description text-reset">
-                              Хеллер, Чваст
+                           <p class="publication__item-price text-reset">
+                              2 200 руб
                            </p>
-                           <button class="publications__button btn">
-                           Заказать
-                           </button>
-                        </li>
-                        <li class="publications__item swiper-slide">
-                           <img src="img/publications-picture-seventh.jpg" alt="Картинка из издания" class="publications__img">
-                           <div class="publications__caption">
-                              <p class="publications__item-text text-reset">
-                                 Искусство и визуальное воспр...
-                              </p>
-                              <p class="publication__item-price text-reset">
-                                 2 200 руб
-                              </p>
-                           </div>
-                           <p class="publication__item-description text-reset">
-                              Арнхейм, Рудольф
+                        </div>
+                        <p class="publication__item-description text-reset">
+                           Гордон, Юрий
+                        </p>
+                        <button class="publications__button btn">
+                        Заказать
+                        </button>
+                     </li>
+                     <li class="publications__item swiper-slide">
+                        <img src="img/publications-picture-fourth.jpg" alt="Картинка из издания" class="publications__img">
+                        <div class="publications__caption">
+                           <p class="publications__item-text text-reset">
+                              Николай Ильин
                            </p>
-                           <button class="publications__button btn">
-                           Заказать
-                           </button>
-                        </li>
-                        <li class="publications__item swiper-slide"></li>
-                        <li class="publications__item swiper-slide"></li>
-                     </ul>
+                           <p class="publication__item-price text-reset">
+                              1 000 руб
+                           </p>
+                        </div>
+                        <p class="publication__item-description text-reset">
+                           Крический, Владимир
+                        </p>
+                        <button class="publications__button btn">
+                        Заказать
+                        </button>
+                     </li>
+                     <li class="publications__item swiper-slide">
+                        <img src="img/publications-picture-fifth.jpg" alt="Картинка из издания" class="publications__img">
+                        <div class="publications__caption">
+                           <p class="publications__item-text text-reset">
+                              Модульные сетки...
+                           </p>
+                           <p class="publication__item-price text-reset">
+                              1 450 руб
+                           </p>
+                        </div>
+                        <p class="publication__item-description text-reset">
+                           Мюллер-Брокманн...
+                        </p>
+                        <button class="publications__button btn">
+                        Заказать
+                        </button>
+                     </li>
+                     <li class="publications__item swiper-slide">
+                        <img src="img/publications-picture-sixth.jpg" alt="Картинка из издания" class="publications__img">
+                        <div class="publications__caption">
+                           <p class="publications__item-text text-reset">
+                              Эволюция графич..
+                           </p>
+                           <p class="publication__item-price text-reset">
+                              3 200 руб
+                           </p>
+                        </div>
+                        <p class="publication__item-description text-reset">
+                           Хеллер, Чваст
+                        </p>
+                        <button class="publications__button btn">
+                        Заказать
+                        </button>
+                     </li>
+                     <li class="publications__item swiper-slide">
+                        <img src="img/publications-picture-seventh.jpg" alt="Картинка из издания" class="publications__img">
+                        <div class="publications__caption">
+                           <p class="publications__item-text text-reset">
+                              Искусство и визуа...
+                           </p>
+                           <p class="publication__item-price text-reset">
+                              2 200 руб
+                           </p>
+                        </div>
+                        <p class="publication__item-description text-reset">
+                           Арнхейм, Рудольф
+                        </p>
+                        <button class="publications__button btn">
+                        Заказать
+                        </button>
+                     </li>
+                     <li class="publications__item swiper-slide visually-hidden"></li>
+                     <li class="publications__item swiper-slide visually-hidden"></li>
+                  </ul>
                </div>
             </div>
          </section>
@@ -2664,13 +2675,16 @@
                   </span>
                   предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: <a href="#" class="projects__text-link link">blanchard-art.ru/projects/about</a>
                </p>
-               <div class="projects__partners swiper-container">
-                  <p class="projects__partners-text text-reset">
-                     Партнёры проектов:
-                  </p>
-                  <button class="projects__arrow swiper-arrow arrow-next btn" aria-label="Стрелка вперед"></button>
-                  <button class="projects__arrow swiper-arrow arrow-prev btn" aria-label="Стрелка назад"></button>
-                     <ul class="projects__list swiper-wrapper list-reset">
+               <p class="projects__partners-text text-reset">
+                  Партнёры проектов:
+               </p>
+               <div class="projects__partners">
+                  <div class="projects__swiper-panel swiper-panel">
+                     <button class="projects__arrow projects__arrow-prev swiper-arrow arrow-prev btn" aria-label="Стрелка назад"></button>   
+                     <button class="projects__arrow projects__arrow-next swiper-arrow arrow-next btn" aria-label="Стрелка вперед"></button>
+                  </div>
+                  <div class="projects__swiper swiper-container">
+                     <ul class="projects__list list-reset swiper-wrapper">
                         <li class="projects__item swiper-slide list-reset">
                            <a href="#" class="projects__link link freelands-foundation">
                               <img class="projects__img" src="img/freelands-foundation.jpg" alt="Freelands Foundation">
@@ -2717,7 +2731,7 @@
                            </a>
                         </li>
                      </ul>
-
+                  </div>
                </div>
             </div>
          </section>
@@ -2736,7 +2750,9 @@
                   <p class="contacts__left-column-text text-reset">
                      Заказать обратный звонок
                   </p>
-                  <form action="https://jsonplaceholder.typicode.com/posts" enctype="multipart/form-data" class="contacts__form js-form" method="POST">
+                  <form action="mail.php" enctype="multipart/form-data" class="contacts__form js-form" method="POST">
+                     <input class="visually-hidden" name="admin_email[]" value="ohthatorh@yandex.ru">
+                     <input class="visually-hidden" name="form_subject" value="Заказать звонок">
                      <div class="just-validate-tooltip-container">
                         <input class="contacts__input input" name="name" type="text" placeholder="Имя*" data-validate-field="name">
                      </div>
@@ -2747,7 +2763,7 @@
                      Заказать
                      </button>
                   </form>
-                  <p class="contacts__left-column-text text-reset">
+                  <p class="contacts__left-column-text contacts-text-bot text-reset">
                      Связаться в один клик
                   </p>
                   <ul class="contacts__list list-reset">
@@ -2767,7 +2783,7 @@
       </main>
       <footer class="footer">
          <div class="footer__content container">
-            <img class="logo" src="img/logo.svg" alt="Логотип Blanchard - художественная галерея"> 
+            <img class="footer__logo logo" src="img/logo.svg" alt="Логотип Blanchard - художественная галерея"> 
             <ul class="footer__list list-reset">
                <li class="footer__item">
                   <a target="_blank" href="https://vk.com" class="footer__link link vk"></a>
@@ -2781,6 +2797,16 @@
             </ul>
          </div>
       </footer>
+      <div class="form-modal-overlay"></div>
+      <div class="form-modal__window">
+         <button class="modal-close btn">&#10008;</button>
+         <div class="form-modal__content">
+            <img class="modal__img" src="img/first.jpg" alt="Картинка в модальном окне">
+            <p class="modal__text text-reset">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sit nam ipsa corrupti rerum esse hic voluptas asperiores! Inventore excepturi iusto aperiam iste. Eveniet quis sit, ex fuga laboriosam dicta?
+            </p>
+         </div>
+      </div>
       <script src="js/jquery-3.5.1.min.js"></script>
       <script src="js/jquery-ui.js"></script>
       <script src="js/accordion.min.js"></script>
@@ -2791,6 +2817,7 @@
       <script src="js/form.js"></script>
       <script src="js/swiper-bundle.min.js"></script>
       <script src="js/simplebar.min.js"></script>
+      <script src="js/swipers.js"></script>
       <script src="js/script.js"></script>
    </body>
 </html>
