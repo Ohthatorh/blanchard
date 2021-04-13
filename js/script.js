@@ -137,6 +137,31 @@ $(function() {
 		$('.modal-close').click();
 	});
 
+	$('.publications__left-column-text').click(function(){
+		$(this).toggleClass('publications--active');
+		$('.checkbox-container__label').each(function(){
+			if (!$(this).is(':visible')) {
+				$(this).fadeIn();
+				$('.checkbox-button').addClass('visually-hidden');
+			} else if ($(this).is(':visible') && $(this).children().is(':checked')) {
+				$(this).fadeIn();
+				$(this).children().each(function(index){
+					(index === 2) ? $(this).removeClass('visually-hidden') : [];
+				});
+			} else {
+				$(this).fadeOut();
+			}
+		});
+	});
+
+	$('.checkbox-button').click(function(){
+		$(this).parent().fadeOut();
+		$(this).addClass('visually-hidden');
+		$(this).siblings().each(function(index){
+			(index === 0) ? $(this).prop('checked', false) : [];
+		});
+	});
+
 	function checkWidth() {
 		if (widthWindow > 1024) {
 			$('.hamburger--spring').removeClass('is-active');
