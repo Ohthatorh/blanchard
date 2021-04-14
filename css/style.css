@@ -1157,6 +1157,7 @@ body {
 
 .publications {
     background-image: url('../img/projects-background.jpg');
+    background-size: cover;
 }
 
 .publications__title {
@@ -1861,6 +1862,10 @@ body {
     font-size: 16px;
 }
 
+.events__pagination {
+    display: none;
+}
+
 @-webkit-keyframes scale {
     0%{
         -webkit-transform: scale(0,0.0,0);
@@ -1910,9 +1915,7 @@ body {
     }
 
     .events__list {
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        justify-content: center;
     }
 
     .events__item {
@@ -1925,6 +1928,10 @@ body {
 
     .publications__img {
         width: 100%;
+    }
+
+    .publications__item {
+        height: max-content;
     }
 
     .contacts__columns {
@@ -2010,8 +2017,8 @@ body {
     }
 
     .events__item {
-        width: 290px;
-        margin-right: 20px;
+        width: 31%;
+        margin-right: 27px;
     }
 
     .events__img {
@@ -2279,6 +2286,18 @@ body {
                 align-items: center;
     }
 
+    .events__list {
+        justify-content: unset;
+    }
+
+    .events__item {
+        margin-right: 34px;
+    }
+
+    .events__item:nth-child(even) {
+        margin-right: 0;
+    }
+
     .modal__text {
         text-align: center;
     }
@@ -2392,7 +2411,10 @@ body {
 
     .events__item {
         width: 317px;
-        margin-right: 0;
+    }
+
+    .events__item:nth-child(3), .events__item:last-child {
+        margin-right: 27px;
     }
 
     .events__description {
@@ -2462,6 +2484,10 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+    .events__pagination {
+        display: block;
+    }
+    
     .gallery__right-column {
         height: 835px;
     }
@@ -2698,10 +2724,6 @@ body {
 
     .events {
         padding-bottom: 50px;
-    }
-
-    .publications {
-        background-size: cover;
     }
 
     .publications__form {
@@ -3080,7 +3102,7 @@ body {
 
     .checkbox-button {
         position: absolute;
-        top: 50%;
+        top: 47%;
         right: 15px;
     }
 

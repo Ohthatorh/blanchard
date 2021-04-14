@@ -108,7 +108,7 @@ $(function(){
 					spaceBetween: 34,
 				},
 	
-				1367: {
+				1085: {
 					slidesPerView: 3,
 					slidesPerGroup: 3,
 					spaceBetween: 50,
@@ -117,9 +117,9 @@ $(function(){
 		});
 		
 		if (widthWindow <= 768) {
-			publicationsSwiper.destroy(true, true);
+			$('.swiper-container')[3].swiper.destroy();
 		} else {
-			eventSwiper.destroy(true, true);
+			$('.swiper-container')[2].swiper.destroy();
 		}
 	}
     window.initializeSwipers = initializeSwipers;
