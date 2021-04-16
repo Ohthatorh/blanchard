@@ -35,7 +35,7 @@ $(function() {
 	$('.hamburger--spring').click(function() {
 		$(this).toggleClass('is-active');
 		$('.header__menu').toggleClass('header__menu-active');
-		$('.header__menu').toggleClass('visually-hidden');
+		($('.header__menu').hasClass('header__menu-active')) ? $('.header__menu').css('visibility', 'visible') : $('.header__menu').css('visibility', 'hidden');
 		($('.hamburger--spring').hasClass('is-active')) ? disableScroll() : enableScroll();
 	});
 
@@ -108,7 +108,7 @@ $(function() {
 		const anchor = $(this).attr('href');
 		$('.hamburger--spring').removeClass('is-active');
 		$('.header__menu').removeClass('header__menu-active');
-		($('.hamburger--spring').is(':visible')) ? $('.header__menu').addClass('visually-hidden') : [];
+		($('.hamburger--spring').is(':visible')) ? $('.header__menu').css('visibility', 'hidden')  : [];
 		$('html, body').stop().animate({
 			scrollTop: $(anchor).offset().top
 		}, 800);
@@ -172,10 +172,7 @@ $(function() {
 		if (widthWindow > 1024) {
 			$('.hamburger--spring').removeClass('is-active');
 			$('.header__menu').removeClass('header__menu-active');
-			$('.header__menu').removeClass('visually-hidden');
 			// enableScroll();
-		} else {
-			$('.header__menu').addClass('visually-hidden');
 		}
 	};
 });

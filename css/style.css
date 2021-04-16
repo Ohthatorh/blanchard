@@ -2151,10 +2151,9 @@ body {
         left: 0;
         z-index: -999;
         background:rgba(0, 0, 0, 0.7);
+        visibility: hidden;
         opacity: 0;
-        -webkit-transition: opacity .4s ease, top .4s ease, position .4s ease;
-        -o-transition: opacity .4s ease, top .4s ease, position .4s ease;
-        transition: opacity .4s ease, top .4s ease, position .4s ease;
+        transition: opacity .4s ease, top .4s ease, visibility .4s ease;
         padding: 20px 50px;
     }
 
@@ -2190,9 +2189,9 @@ body {
     }
 
     .header__menu-active {
-        opacity: 1;
         top: 100px;
         z-index: 1;
+        opacity: 1;
     }
 
     .header__top {
