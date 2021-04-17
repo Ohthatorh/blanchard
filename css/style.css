@@ -2486,6 +2486,11 @@ body {
     .events__pagination {
         display: block;
     }
+
+    .gallery__columns {
+        padding-top: 53px !important;
+        padding-bottom: 216px !important;
+    }
     
     .gallery__right-column {
         height: 835px;
@@ -2550,39 +2555,6 @@ body {
     .logo {
         width: 130px;
         height: 40px;
-    }
-
-    .hamburger--spring .hamburger-inner::before {
-        top: 10px;
-    }
-
-    .hamburger--spring .hamburger-inner::after {
-        top: 20px;
-    }
-
-    .hamburger-box {
-        width: 21px;
-        height: 21px;
-    }
-
-    .hamburger-inner {
-        width: 20px;
-    }
-
-    .hamburger-inner::before {
-        width: 15px;
-    }
-
-    .hamburger-inner::after {
-        width: 13px;
-    }
-
-    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-        height: 2px;
-    }
-
-    .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
-        width: 20px;
     }
 
     .banner__link {
@@ -2671,9 +2643,9 @@ body {
     }
 
     .catalog__accordion-list {
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-        max-height: unset;
+        /* -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; */
+        max-height: 450px;
         padding: 19px 0px 24px 0;
     }
 
@@ -2944,11 +2916,6 @@ body {
         line-height: 28px;
     }
 
-    .gallery__columns {
-        padding-top: 53px;
-        padding-bottom: 216px;
-    }
-
     .gallery__left-column-title {
         margin-bottom: 22px;
     }
@@ -3009,6 +2976,9 @@ body {
     }
 
     .catalog__accordion-list {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            max-height: unset;
         padding: 22px 0px 15px 0;
     }
 
