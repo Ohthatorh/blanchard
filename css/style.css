@@ -1775,7 +1775,7 @@ body {
 
 .hamburger {
     display: none;
-    padding: 10px 10px 10px 0;
+    padding: 12px 10px 8px 0;
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after,
@@ -2872,11 +2872,30 @@ body {
     }
 
     .hamburger-box {
+        width: 20px;
         height: 17px;
     }
 
     .hamburger {
         padding: 9px 16px 7px 0;
+    }
+
+    .hamburger-inner {
+        width: 20px;
+        height: 2px;
+    }
+
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+        width: 20px;
+        height: 2px;
+    }
+
+    .hamburger-inner::before {
+        width: 16px;
+    }
+
+    .hamburger-inner::after {
+        width: 14px;
     }
 
     .header__top-search {
