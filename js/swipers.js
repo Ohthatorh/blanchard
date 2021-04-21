@@ -2,10 +2,10 @@ $(function(){
 	function initializeSwipers() {
         const widthWindow = document.documentElement.clientWidth;
 		const gallerySwiper = new Swiper($('.swiper-container')[1], {	
-			// autoplay: {
-			// 	delay: 3000,
-			// 	disableOnInteraction: false,
-			// },
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
 	
 			pagination: {
 			  el: '.swiper-pagination',
@@ -41,10 +41,10 @@ $(function(){
 			}
 		});
 		const projectsSwiper = new Swiper($('.swiper-container')[4], {
-			// autoplay: {
-			// 	delay: 3000,
-			// 	disableOnInteraction: false,
-			// },
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
 	
 			pagination: {
 			  el: '.swiper-pagination',
@@ -85,10 +85,10 @@ $(function(){
 			}
 		});
 		const publicationsSwiper = new Swiper($('.swiper-container')[3], {
-			// autoplay: {
-			// 	delay: 3000,
-			// 	disableOnInteraction: false,
-			// },
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
 	
 			pagination: {
 			  el: '.swiper-pagination',
